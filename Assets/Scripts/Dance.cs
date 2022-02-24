@@ -15,19 +15,19 @@ public class Dance : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.F1))
         {
             animator.SetTrigger("idle");
         }
-        else if (Input.GetKey(KeyCode.LeftArrow)) 
+        else if (Input.GetKey(KeyCode.F2)) 
         {
             animator.SetTrigger("bootyHipHopDance");
         }
-        else if (Input.GetKey(KeyCode.UpArrow)) 
+        else if (Input.GetKey(KeyCode.F3)) 
         {
             animator.SetTrigger("ymcaDance");
         }
-        else if (Input.GetKey(KeyCode.RightArrow)) 
+        else if (Input.GetKey(KeyCode.F4)) 
         {
             animator.SetTrigger("shoppingCartDance");
         }
