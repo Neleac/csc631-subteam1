@@ -16,9 +16,8 @@ public class NetworkRequestTable {
 		add(Constants.CMSG_MOVE, "RequestMove");
 		add(Constants.CMSG_INTERACT, "RequestInteract");
 
-		// added two new constants for protocols CreateGame and CheckLobby
-		add(Constants.CMSG_CREATEGAME, "RequestCreateGame");
-		add(Constants.CMSG_CHECKLOBBY, "RequestCheckLobby");
+		add(Constants.CMSG_NEWGAME, "RequestNewGame");
+		add(Constants.CMSG_JOINGAME, "RequestJoinGame");
 	}
 	
 	public static void add(short request_id, string name) {

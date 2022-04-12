@@ -117,34 +117,22 @@ public class NetworkManager : MonoBehaviour
 		StartCoroutine(RequestHeartbeat(time));
 	}
 
-	// created three new protocols: JoinGame, CreateGame, and LeaveGame
-	public bool JoinGame() {
+	public bool SendNewGameRequest(int nGames) {
 		if (cManager && cManager.IsConnected())
 		{
-			RequestJoin request = new RequestJoin();
-			request.send();
+			RequestNewGame request = new RequestNewGame();
+			request.send(nGames);
 			cManager.send(request);
 			return true;
 		}
 		return false;
 	}
 
-	public bool CreateGame() {
+	public bool SendJoinGameRequest(string roomName) {
 		if (cManager && cManager.IsConnected())
 		{
-			RequestJoin request = new RequestJoin();
-			request.send();
-			cManager.send(request);
-			return true;
-		}
-		return false;
-	}
-
-	public bool LeaveGame() {
-		if (cManager && cManager.IsConnected())
-		{
-			RequestJoin request = new RequestJoin();
-			request.send();
+			RequestJoinGame request = new RequestJoinGame();
+			request.send(roomName);
 			cManager.send(request);
 			return true;
 		}

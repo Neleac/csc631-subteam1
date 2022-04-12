@@ -16,9 +16,8 @@ public class NetworkResponseTable {
 		add(Constants.SMSG_MOVE, "ResponseMove");
 		add(Constants.SMSG_INTERACT, "ResponseInteract");
 
-		// added two new constants for protocols CreateGame and CheckLobby
-		add(Constants.SMSG_CREATEGAME, "ResponseCreateGame"); // 200
-		add(Constants.SMSG_CHECKLOBBY, "ResponseCheckLobby"); // 207
+		add(Constants.SMSG_NEWGAME, "ResponseNewGame");
+		add(Constants.SMSG_JOINGAME, "ResponseJoinGame");
 	}
 	
 	public static void add(short response_id, string name) {

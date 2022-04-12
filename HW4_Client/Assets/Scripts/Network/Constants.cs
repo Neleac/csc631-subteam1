@@ -20,11 +20,10 @@ public class Constants
 	public static readonly short SMSG_INTERACT = 206;
 	public static readonly short CMSG_HEARTBEAT = 111;
 
-	// Request and Response for two new protocols: CreateGame and CheckLobby
-	public static readonly short CMSG_CREATEGAME = 100;
-	public static readonly short SMSG_CREATEGAME = 200;
-	public static readonly short CMSG_CHECKLOBBY = 107;
-	public static readonly short SMSG_CHECKLOBBY = 207;
+	public static readonly short CMSG_NEWGAME = 109;
+	public static readonly short SMSG_NEWGAME = 209;
+	public static readonly short CMSG_JOINGAME = 110;
+	public static readonly short SMSG_JOINGAME = 210;
 
 	public static int USER_ID = -1;
 	public static int OP_ID = -1;

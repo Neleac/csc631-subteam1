@@ -11,12 +11,12 @@ public class NetworkUtility : MonoBehaviour
         networkmanager = GetComponent<NetworkManager>();
     }
 
-    public void CreateGame()
-    {
-        if (networkmanager != null)
-        {
-            networkmanager.CreateGame();
-        }
-    }
+    // public void CreateGame()
+    // {
+    //     if (networkmanager != null)
+    //     {
+    //         networkmanager.CreateGame();
+    //     }
+    // }
     
 }
