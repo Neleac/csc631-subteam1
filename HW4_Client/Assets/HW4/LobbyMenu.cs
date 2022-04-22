@@ -8,6 +8,8 @@ public class LobbyMenu : MonoBehaviour
 
     private NetworkManager networkManager;
 
+    public GameObject buttonPrefab;
+    public Transform buttonGroup;
     void Awake()
     {
         networkManager = GameObject.Find("Network Manager").GetComponent<NetworkManager>();
@@ -43,6 +45,10 @@ public class LobbyMenu : MonoBehaviour
         ResponseNewGameEventArgs args = eventArgs as ResponseNewGameEventArgs;
         nGames = args.nGames;
 
+        GameObject currentButton = Instantiate(buttonPrefab, buttonGroup);
+        //currentButton.transform.Translate(50 * nGames, 0, 0);
+        currentButton.GetComponent<GameButtonInfo>().SetGameName( "Game " + nGames);
+        /*
         if (nGames == 1)
         {
             transform.Find("Game A").gameObject.SetActive(true);
@@ -58,6 +64,7 @@ public class LobbyMenu : MonoBehaviour
             transform.Find("Game C").gameObject.SetActive(true);
             transform.Find("Game C").Find("closed").gameObject.SetActive(false);
         }
+        */
     }
 
     public void OnResponseJoinGame(ExtendedEventArgs eventArgs)
@@ -65,10 +72,9 @@ public class LobbyMenu : MonoBehaviour
         ResponseJoinGameEventArgs args = eventArgs as ResponseJoinGameEventArgs;
         name = args.name;
 
-        transform.Find(name).Find("open").gameObject.SetActive(false);
-        transform.Find(name).Find("open").gameObject.SetActive(false);
+        GameButtonInfo button = buttonGroup.Find(name).GetComponent<GameButtonInfo>();
 
-        transform.Find(name).Find("closed").gameObject.SetActive(true);
-        transform.Find(name).Find("closed").gameObject.SetActive(true);
+        button.nameText.text = button.gameName + " 2/2";
+        //transform.Find(name).Find("closed").gameObject.SetActive(true);
     }
 }
