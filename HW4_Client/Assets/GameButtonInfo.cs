@@ -1,8 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
+
 using TMPro;
-public class GameButtonInfo : MonoBehaviour
+public class GameButtonInfo : MonoBehaviour, IPointerClickHandler
 {
     public string gameName;
     public TextMeshProUGUI nameText;
@@ -10,6 +13,11 @@ public class GameButtonInfo : MonoBehaviour
     void Start()
     {
         
+    }
+
+    public void DestroyObject()
+    {
+        Destroy(gameObject);
     }
     public void SetGameName( string lobbyName) {
         gameName = lobbyName;
@@ -24,5 +32,15 @@ public class GameButtonInfo : MonoBehaviour
     void Update()
     {
         
+    }
+
+    // destroy object upon right clicking it
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if (eventData.button == PointerEventData.InputButton.Right)
+        {
+            DestroyObject();
+        }
+
     }
 }

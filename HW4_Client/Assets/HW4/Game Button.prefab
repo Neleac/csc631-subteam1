@@ -283,6 +283,7 @@ GameObject:
   - component: {fileID: 6198722178802993286}
   - component: {fileID: 6198722178802993287}
   - component: {fileID: -6686510016560006178}
+  - component: {fileID: 4858271884875226375}
   m_Layer: 5
   m_Name: Game Button
   m_TagString: Untagged
@@ -309,8 +310,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -180, y: 60}
-  m_SizeDelta: {x: 150, y: 100}
+  m_AnchoredPosition: {x: -180, y: 92.69663}
+  m_SizeDelta: {x: 150, y: 34.6068}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6198722178802993285
 CanvasRenderer:
@@ -420,3 +421,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameName: 
   nameText: {fileID: 6198722178529892225}
+--- !u!114 &4858271884875226375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6198722178802993281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
